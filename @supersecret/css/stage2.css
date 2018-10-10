@@ -1,0 +1,142 @@
+/* Global styling */
+
+body {
+  background-color: #e6ecf0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Page styling */
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  max-width: 1400px;
+  min-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background: #ffffff;
+  height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.header__icon,
+.header__profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.title__icon,
+.title__text {
+  font-size: 64px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.title__icon {
+  display: none;
+}
+
+.title__text {
+  display: block;
+}
+
+/* Card styling */
+
+.card {
+  position: relative;
+  background-color: white;
+  max-width: 100%;
+  margin: 20px 10px;
+  padding: 18px 24px;
+  border: 2px solid #e6ecf0;
+  border-radius: 5px;
+  box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.2);
+
+  /* This will 'cascade' into any elements inside the card */
+  text-align: left;
+  color: #14171a;
+  line-height: 1.25;
+}
+
+.card__avatar {
+  position: absolute;
+  top: 18;
+  right: 24px;
+
+  width: 64px;
+  height: 64px;
+
+  border: 1px solid #e6ecf0;
+  border-radius: 32px;
+}
+
+.card__name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.card__position {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #66757f;
+}
+
+.card__content {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 480px) {
+  .title__icon {
+    display: block;
+  }
+
+  .title__text {
+    display: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card__avatar {
+    position: static;
+  }
+}
